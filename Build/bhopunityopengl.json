@@ -1,0 +1,11 @@
+{
+"companyName": "bhoponunity",
+"productName": "unitybhop_bazic",
+"dataUrl": "bhopunityopengl.data.unityweb",
+"asmCodeUrl": "bhopunityopengl.asm.code.unityweb",
+"asmMemoryUrl": "bhopunityopengl.asm.memory.unityweb",
+"asmFrameworkUrl": "bhopunityopengl.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
