@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+h1 {
+    color: white;
+}
+
+h2{
+    margin-bottom: 0;
+}
+
+body{
+    font-family: "Noto Sans";
+    margin: 0;
+    background-color: #494949;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    padding:0.5em;
+}
+
+p{
+    margin-bottom: 0.5em;
+}
+
+a:hover {
+    background-color: #55aaff;
+}
+
+.header {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: -0.5em; /**for some reason html keeps making a break in the page if this is not added**/
+    margin-bottom: -0.25em;
+    background-color: cornflowerblue;
+}
+
+
+#tagline {
+    /**font-style: italic;**/
+    justify-content: space-between;
+    font-size: 0.9em;
+    margin-right: 0.5em;
+    color: white;
+}
+
+#currentpage{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: baseline;
+    background-color: cornflowerblue;
+    /**font-style: italic; disabled for visibility **/
+}
+
+
+.maincontainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    display: flex;
+    float: left;
+    border-right: 1px dotted white;
+    padding-top: 1em;
+    text-align: left;
+    clear: left;
+    flex-direction: column;
+}
+
+.sidebar-child{
+    margin: 0.5em;
+}
+
+.content{
+    display: flex;
+    float: left;
+    color: white;
+    text-align: left;
+    margin: 0.5em 0.5em 0.5em 1em;
+    flex-direction: column;
+}
+
+.onpagespeciallink{
+    margin-top: 1em;
+    margin-left: -0.5em;
+}
