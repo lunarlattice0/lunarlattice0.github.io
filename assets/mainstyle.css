@@ -1,13 +1,67 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
-
 /*Copper palette
 #b85420
-#894128
-#573333
-#102f3c
-#014a50
 */
 
 body {
-	background-color: #102f3c;
+	font-family: Tahoma, sans-serif;
+	background-color: Black;
+	margin: auto;
+	width: 50%;
+	height: 50%;
+	color: GoldenRod;
 }
+
+ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+a {
+	color: Red;
+	text-decoration: none;
+}
+
+a:not(.nohover):hover {
+	background-color: Orange;
+}
+h1 {
+	margin-bottom: 0px;
+	margin-right: 5px;
+}
+
+p {
+	margin: 0px;
+}
+
+
+
+.header {
+	text-align: left;
+	justify-content: flex-start;
+	align-items: baseline;
+	display: flex;
+	border-bottom: solid;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.maintitle {
+	margin-top: 0px;
+}
+
+.main {
+	display: flex;
+	margin: 10px;
+	padding: 10px;
+}
+
+.indexbar {
+	padding-right: 10px;
+}
+
+.content {
+	padding-left: 10px;
+	border-left: solid;
+}
+
