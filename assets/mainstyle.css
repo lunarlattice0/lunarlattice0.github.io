@@ -2,13 +2,24 @@
 #b85420
 */
 
-body {
-	font-family: Tahoma, sans-serif;
-	background-color: Black;
-	margin: auto;
-	width: 50%;
-	height: 50%;
-	color: GoldenRod;
+@media screen and (orientation: landscape) {
+	body {
+		font-family: Tahoma, sans-serif;
+		background-color: Black;
+		margin: auto;
+		width: 60%;
+		height: 60%;
+		color: GoldenRod;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	body {
+		font-family: Tahoma, sans-serif;
+		background-color: Black;
+		margin: auto;
+		color: GoldenRod;
+	}
 }
 
 code {
