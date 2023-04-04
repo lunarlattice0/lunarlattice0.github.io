@@ -67,7 +67,7 @@ p {
 
 .content {
 
-	flex-wrap: wrap;
+	overflow-wrap: anywhere;
 	padding-left: 10px;
 	border-left: solid;
 }
