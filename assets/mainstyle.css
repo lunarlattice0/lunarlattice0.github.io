@@ -56,7 +56,6 @@ p {
 }
 
 .main {
-	flex-wrap: wrap;
 	display: flex;
 	margin: 10px;
 	padding: 10px;
@@ -67,6 +66,8 @@ p {
 }
 
 .content {
+
+	flex-wrap: wrap;
 	padding-left: 10px;
 	border-left: solid;
 }
