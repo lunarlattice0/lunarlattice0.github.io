@@ -46,7 +46,11 @@
 				<li><h4>Initial Join Data</h4></li>
 				<li>
 					<img src="/pages/blog/rbxplayerdatacollection/joinIPs.png" alt="Initial Server IDs">
+				</li>
+				<li>
 					<img src="/pages/blog/rbxplayerdatacollection/raknet.png" alt="Initial Server IDs">
+				</li>
+				<li>
 					<img src="/pages/blog/rbxplayerdatacollection/timings.png" alt="timings">
 
 					<p>On initial launch and join, some data including server connection information and RakNet encryption data is sent. This is innocuous and can be easily viewed from Roblox internally by pressing Ctrl-Shift-F3. However, one should take note that Roblox keeps strict tabs on program timing (seen in timings.png), counting and reporting FPS even when the program is idle.</p>
@@ -57,6 +61,8 @@
 				<li><h4>Erm...My email?</h4></li>
 				<li>
 					<img src="/pages/blog/rbxplayerdatacollection/email.png" alt="email?">
+				</li>
+				<li>
 					<p>It seems odd to send my email address (thankfully truncated to the client). However, as this is HTTPS encrypted data, this is a safe practice, especially as most of the email is hidden.</p>
 				</li>
 			</ul>
@@ -65,6 +71,8 @@
 				<li><h4>Yoink, your assets are mine</h4></li>
 				<li>
 					<img src="/pages/blog/rbxplayerdatacollection/yoink.png" alt="your assets are mine">
+				</li>
+				<li>
 					<p>Though unrelated to data collection, this packet is of note. It appears that any assets not transmitted through RakNet (such as baseplate data or other Roblox internal datatypes) are transmitted through HTTP. I have recovered meshes, audio files, animations, and images from simply visiting a game. This could make stealing assets trivial; there would no longer be a need to exploit a game before acquiring its data.</p>
 				</li>
 			</ul>	
@@ -73,8 +81,13 @@
 				<li><h4>Control Freak!</h4></li>
 				<li>
 					<img src="/pages/blog/rbxplayerdatacollection/devconsole.png" alt="console">
+				</li>
+				<li>
 					<img src="/pages/blog/rbxplayerdatacollection/perf.png" alt="performance">
+				</li>
+				<li>
 					<img src="/pages/blog/rbxplayerdatacollection/timezones.png" alt="timezones">
+				</li>
 					<p>As a reiteration of my previous point, Roblox seems to highly value timing data. The amount of time the user keeps the developer console open, the system memory frame time, and the user's timezone are all transmitted frequently.</p>
 				</li>
 			</ul>
