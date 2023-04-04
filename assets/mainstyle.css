@@ -11,6 +11,11 @@ body {
 	color: GoldenRod;
 }
 
+code {
+	background-color: Grey;
+	color: Cyan;
+}
+
 ul {
 	list-style: none;
 	padding: 0px;
