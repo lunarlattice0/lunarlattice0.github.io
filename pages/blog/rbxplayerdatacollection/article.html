@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+	<title>lunarlattice</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="/assets/mainstyle.css">
+</head>
+<body>
+	<div class="header">
+		<h1><a href="/index.html">lunarlattice</a></h1>
+		<small><i>vinegarhq co-founder and pro time-waster</i></small>
+	</div>
+	<div class="main">
+		<div class="indexbar">
+			<ul>
+				<li><a href="/pages/blog.html">blog</a></li>
+				<li><a href="/pages/projects.html">projects</a></li>
+				<li><a href="/pages/contact.html">contact_me</a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<h3 class="maintitle">Who's watching me play? A rudimentary look into Roblox Player's data collection</h3>
+			<p>Roblox is a highly interesting ecosystem with <i>questionable</i> security and privacy practices. The company has gone to great lengths to prevent reverse-engineering and exploitation through the inclusion of VMProtect obfuscation, as well as in-house and third-party anticheat (which lead to great pains for Linux gamers for several years). Additionally, much of its networking protocol, though based on RakNet, is undocumented. However, I have managed to devise a method to decrypt the HTTPS traffic produced by the executable itself giving an initial look into the user data collected. Do note, however, that this article is not at all-encompassing. During the development of the Grapejuice Flatpak, I discovered the usage of ptrace() by Roblox Player, potentially indicating other nasty forms of data collection. But I digress...</p>
+			<h4>Breaking it down: Decrypting HTTPS data</h4>
+			<p>My current method is only viable on Linux systems with WINE, though it is theoretically possible to replicate on Windows. The only required software are Wireshark and WINE. The technique is as follows:</p>
+			<ol>
+				<li>Begin a Wireshark recording session and filter by HTTPS</li>
+				<li>Pass SSLKEY="file" environment variable in WINE</li>
+				<ul>
+					<li><i>This can be done through the [env] field in Vinegar!</i></li>
+				</ul>
+				<li>Load the keyfile into Wireshark</li>
+				<li>Analyze the decrypted payload</li>
+			</ol>
+		</div>
+	</div>
+	<p>
+		<a class="nohover" href="http://jigsaw.w3.org/css-validator/validator?lang=en&profile=css3svg&uri=Thelolguy1.github.io&usermedium=all&vextwarning=&warning=1">
+			<img style="border:0;width:88px;height:31px"
+			src="http://jigsaw.w3.org/css-validator/images/vcss"
+			alt="Valid CSS!" />
+		</a>
+	</p>
+	<font color=black>curlwashere</font>
+</body>
