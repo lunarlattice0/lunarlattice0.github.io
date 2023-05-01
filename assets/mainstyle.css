@@ -50,7 +50,9 @@ p {
 	margin: 0px;
 }
 
-
+img.content {
+  width: inherit;
+}
 
 .header {
 	text-align: left;
@@ -77,7 +79,6 @@ p {
 }
 
 .content {
-
 	overflow-wrap: anywhere;
 	padding-left: 10px;
 	border-left: solid;
