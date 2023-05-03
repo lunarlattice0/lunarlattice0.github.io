@@ -55,10 +55,6 @@ img.content {
   height: auto;
 }
 
-ul.content {
-	list-style: default;
-}
-
 .header {
 	text-align: left;
 	justify-content: flex-start;
