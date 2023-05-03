@@ -40,21 +40,21 @@
 		  <h4>Why not use Wireshark directly?</h4>
 		  <p>While Wireshark can, in fact, recover Roblox assets by itself, the interface for doing so is clunky. Furthermore, it occasionally fails to catch all the received assets, and fails to handle multi-part and grouped asset downloads.</p>
 		  <h4>How do I use sifter?</h4>
-		  <p>The process takes a few steps. First of all, we need to set the SSLKEYLOGFILE environment variable to tell the TLS library Roblox uses to dump the private key it uses. On Linux, you can prepend "SSLKEYLOGFILE=/filepath" before running Wine. If using Vinegar, you may add it under the [env] tag as seen below. On Windows systems, you will need to create a user environment variable. Following <a href="https://docs.oracle.com/en/database/oracle/machine-learning/oml4r/1.5.1/oread/creating-and-modifying-environment-variables-on-windows.html">this guide from Oracle, you will need to create a "User Variable" with a Variable name of "SSLKEYLOGFILE" and a value of any accessible location where you would like the private keys to be saved.</p>
-		  <img src="/pages/blog/sifter/env.png" alt="envsetting">
+		  <p>The process takes a few steps. First of all, we need to set the SSLKEYLOGFILE environment variable to tell the TLS library Roblox uses to dump the private key it uses. On Linux, you can prepend "SSLKEYLOGFILE=/filepath" before running Wine. If using Vinegar, you may add it under the [env] tag as seen below. On Windows systems, you will need to create a user environment variable. Following <a href="https://docs.oracle.com/en/database/oracle/machine-learning/oml4r/1.5.1/oread/creating-and-modifying-environment-variables-on-windows.html"></a>this guide from Oracle, you will need to create a "User Variable" with a Variable name of "SSLKEYLOGFILE" and a value of any accessible location where you would like the private keys to be saved.</p>
+		  <img src="/pages/blog/sifter/images/env.png" alt="envsetting">
 		  <p>After this step, you will want to open Wireshark (administrator privileges may be required), and navigate through the top menu. You will need to traverse the path "Edit > Preferences > Protocols > TLS", before you will be able to see a textbox called "(Pre)-Master-Secret log filename". Here, enter the filepath specified by your SSLKEYLOGFILE setting.
-		  <img src="/pages/blog/sifter/wiresharkconfig.png" alt="wshark config">
+		  <img src="/pages/blog/sifter/images/wiresharkconfig.png" alt="wshark config">
 		  <p>Once you have pressed OK to close the window, select the network interface you are using. Doing so will automatically begin capturing packets. At this point in time, you will be able to start a game on Roblox. Asset requests are actively made as you play, so hang around while Wireshark does its magic!</p>
-		  <img src="/pages/blog/sifter/startgame.png" alt="boblox">
+		  <img src="/pages/blog/sifter/images/startgame.png" alt="boblox">
 		  <p>Once some time has elapsed, it is time to harvest! At the top of the Wireshark page is a text box; that field is where you can enter the filter 'http.request.full_uri contains "rbxcdn"' to only display asset captures.
-		  <img src="/pages/blog/sifter/filter.png" alt="filter">
+		  <img src="/pages/blog/sifter/images/filter.png" alt="filter">
 		  <p>After you have filtered the results, select all entries and right click them to open the context menu. There, you can export the packets <b>(JSON TYPE ONLY)</b> under a filename of your choice (see images).
-		  <img src="/pages/blog/sifter/export.png" alt="export">
-		  <img src="/pages/blog/sifter/export2.png" alt="filter">
+		  <img src="/pages/blog/sifter/images/export.png" alt="export">
+		  <img src="/pages/blog/sifter/images/export2.png" alt="filter">
 		  <p>Once you have created the JSON, use the sifter executable with the JSON as your first argument and an output location as your first arguument. Sifter will automatically resolve requests to their original URLs and download the files</p>
-		  <img src="/pages/blog/sifter/terminal.png" alt="sifter">
+		  <img src="/pages/blog/sifter/images/terminal.png" alt="sifter">
 		  <p>Finally, you can view the files in the target location</p>
-		  <img src="/pages/blog/sifter/out.png" alt="out">
+		  <img src="/pages/blog/sifter/images/out.png" alt="out">
 		  
 		</div>
 	</div>
