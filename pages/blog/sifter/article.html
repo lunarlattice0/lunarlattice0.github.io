@@ -20,7 +20,27 @@
 		</div>
 		<div class="content">
 			<h3 class="maintitle">Sifter: A non-invasive Roblox asset recovery tool</h3>
-			<p>Coming soon...</p>
+			<p>I have created a new tool for recovering Roblox assets based on the <a href="/pages/blog/rbxplayerdatacollection/article.html">findings in my previous article.</a> It is completely non-invasive as it relies on collecting data after it has left Roblox, instead of attacking the executable directly. This means that you will never be banned for using this tool, and that it will continue working even with the new Byfron anti-cheat. It will continue functioning until Roblox completely overhauls its protocol to not rely on HTTP for asset transfer.</p>
+			<h4>What can Sifter do and NOT do?</h4>
+			<p>Sifter CAN recover the following assets:</p>
+			<ul>
+			  <li>Images / Decals / Textures</li>
+			  <li>Sounds</li>
+			  <li>Text using the Localization Service</li>
+			  <li>Meshes</li>
+			  <li>Models(?)</li>
+		  </ul>
+		  <p>Sifter CANNOT recover:</p>
+		  <ul>
+		    <li>Game Workspaces (e.g. terrain, game world, part locations)</li>
+		    <li>Scripts both Local and Serversided</li>
+		  </ul>
+		  <h4>Cool, what do I need?</h4>
+      <p>You will need Wireshark (available for all platforms Roblox runs on) and basic intuition about your system's settings, as you will need to set environment variables for this software to work.</p> 
+		  <h4>Why not use Wireshark directly?</h4>
+		  <p>While Wireshark can, in fact, recover Roblox assets by itself, the interface for doing so is clunky. Furthermore, it occasionally fails to catch all the received assets, and fails to handle multi-part and grouped asset downloads.</p>
+		  <h4>So how do I use sifter?</h4>
+		  
 		</div>
 	</div>
 	<p>
