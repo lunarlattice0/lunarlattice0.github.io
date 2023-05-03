@@ -20,6 +20,7 @@
 		</div>
 		<div class="content">
 			<h3 class="maintitle">Sifter: A non-invasive Roblox asset recovery tool</h3>
+			<p><a href="https://github.com/Thelolguy1/sifter/releases/">Available on GitHub!</a></p>
 			<p>I have created a new tool for recovering Roblox assets based on the <a href="/pages/blog/rbxplayerdatacollection/article.html">findings in my previous article.</a> It is completely non-invasive as it relies on collecting data after it has left Roblox, instead of attacking the executable directly. This means that it is HIGHLY unlikely you will be banned for using this tool, and that it will continue working even with the new Byfron anti-cheat. It will continue functioning until Roblox completely overhauls its protocol to not rely on HTTP for asset transfer. Use this program as you would like (following GPL3 of course), but I don't assume any responsibility for unethical usage.</p>
 			<h4>What can Sifter do and NOT do?</h4>
 			<p>Sifter CAN recover the following assets:</p>
@@ -43,13 +44,13 @@
 		  <p>The process takes a few steps. First of all, we need to set the SSLKEYLOGFILE environment variable to tell the TLS library Roblox uses to dump the private key it uses. On Linux, you can prepend "SSLKEYLOGFILE=/filepath" before running Wine. If using Vinegar, you may add it under the [env] tag as seen below. On Windows systems, you will need to create a user environment variable. Following <a href="https://docs.oracle.com/en/database/oracle/machine-learning/oml4r/1.5.1/oread/creating-and-modifying-environment-variables-on-windows.html"></a>this guide from Oracle, you will need to create a "User Variable" with a Variable name of "SSLKEYLOGFILE" and a value of any accessible location where you would like the private keys to be saved.</p>
 		  
 		  <img src="/pages/blog/sifter/images/env.png" alt="envsetting"><br>
-		  <p>After this step, you will want to open Wireshark (administrator privileges may be required), and navigate through the top menu. You will need to traverse the path "Edit > Preferences > Protocols > TLS", before you will be able to see a textbox called "(Pre)-Master-Secret log filename". Here, enter the filepath specified by your SSLKEYLOGFILE setting.
+		  <p>After this step, you will want to open Wireshark (administrator privileges may be required), and navigate through the top menu. You will need to traverse the path "Edit > Preferences > Protocols > TLS", before you will be able to see a textbox called "(Pre)-Master-Secret log filename". Here, enter the filepath specified by your SSLKEYLOGFILE setting.</p>
 		  <img src="/pages/blog/sifter/images/wiresharkconfig.png" alt="wshark config"><br>
 		  <p>Once you have pressed OK to close the window, select the network interface you are using. Doing so will automatically begin capturing packets. At this point in time, you will be able to start a game on Roblox. Asset requests are actively made as you play, so hang around while Wireshark does its magic!</p>
 		  <img src="/pages/blog/sifter/images/startgame.png" alt="boblox"><br>
 		  <p>After some time has elapsed, it is time to harvest! At the top of the Wireshark page is a text box; that field is where you can enter the filter 'http.request.full_uri contains "rbxcdn"' to only display asset captures.</p>
 		  <img src="/pages/blog/sifter/images/filter.png" alt="filter"><br>
-		  <p>After you have filtered the results, select all entries and right click them to open the context menu. There, you can export the packets <b>(JSON TYPE ONLY)</b> under a filename of your choice (see images).<br>
+		  <p>After you have filtered the results, select all entries and right click them to open the context menu. There, you can export the packets <b>(JSON TYPE ONLY)</b> under a filename of your choice (see images).</p>
 		  <img src="/pages/blog/sifter/images/export.png" alt="export"><br>
 		  <img src="/pages/blog/sifter/images/export2.png" alt="filter"><br>
 		  <p>Once you have created the JSON, use the sifter executable with the JSON as your first argument and an output location as your first arguument. Sifter will automatically resolve requests to their original URLs and download the assets.</p>
